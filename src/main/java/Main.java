@@ -26,7 +26,7 @@ public class Main {
            if (clientSocket != null) {
              // Send Ping
              OutputStream outputStream = clientSocket.getOutputStream();
-             outputStream.write("+PONG\\r\\n".getBytes());
+             outputStream.write("+PONG\r\n".getBytes());
 
              // Finish by closing socket connection
              clientSocket.close();
