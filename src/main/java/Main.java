@@ -1,4 +1,5 @@
 import java.io.IOException;
+import java.io.OutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 
@@ -23,6 +24,11 @@ public class Main {
        } finally {
          try {
            if (clientSocket != null) {
+             // Send Ping
+             OutputStream outputStream = clientSocket.getOutputStream();
+             outputStream.write("+PONG\\r\\n".getBytes());
+
+             // Finish by closing socket connection
              clientSocket.close();
            }
          } catch (IOException e) {
