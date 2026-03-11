@@ -42,7 +42,7 @@
                             <mainClass>Main</mainClass>
                         </manifest>
                     </archive>
-                    <outputDirectory>${dir}</outputDirectory>
+                    <outputDirectory>${project.build.directory}</outputDirectory>
                 </configuration>
 
                 <executions>
